@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+// import { useState } from "react";
 import AuburnAvenue from "@/public/images/auburn-avenue-cover.png";
 import CarollCreek from "@/public/images/caroll-creek-cover.png";
 import NationalHQ from "@/public/images/national-hq.png";

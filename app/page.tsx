@@ -2,7 +2,6 @@ import Image from "next/image";
 import CoverImage from "../public/images/c1.webp";
 import About from "@/app/components/About";
 import Portfolio from "@/app/components/Portfolio";
-import TestPortfolio from "@/app/components/TestPortfolio";
 
 export default function Home() {
   return (
@@ -19,9 +18,6 @@ export default function Home() {
       <div className="">
         <Portfolio />
       </div>
-      {/* <div>
-        <TestPortfolio />
-      </div> */}
     </div>
   );
 }

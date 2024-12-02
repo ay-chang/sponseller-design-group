@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import CarollCreek1 from "@/public/images/Carroll Creek/caroll-creek-1.png";
 import CarollCreek2 from "@/public/images/Carroll Creek/caroll-creek-2.png";
@@ -58,10 +56,10 @@ const CarollCreek = () => {
           <h1 className="text-4xl font-semibold pb-8">Caroll Creek Historic District</h1>
           <p className="text-lg font-medium">
             Located in a historic district on the National Register of Historic Places, the
-            project's design responds to the industrial legacy of its site including a former
-            rail station, warehouses, and manufacturing buildings. The site is located on the
-            historic Carroll Creek canal and public park. The building concept consists of
-            three wings organized around three outdoor courtyards. The material selections
+            project&apos;s design responds to the industrial legacy of its site including a
+            former rail station, warehouses, and manufacturing buildings. The site is located
+            on the historic Carroll Creek canal and public park. The building concept consists
+            of three wings organized around three outdoor courtyards. The material selections
             include clay masonry consistent with the historic context and metal panels that
             recall historic metal roofscapes in Frederick. The program includes retail and
             residential uses.

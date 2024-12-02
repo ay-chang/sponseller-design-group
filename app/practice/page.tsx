@@ -1,7 +1,9 @@
 const Practice = () => {
   return (
     <div>
-      <div></div>
+      <div>Practice Page</div>
     </div>
   );
 };
+
+export default Practice;

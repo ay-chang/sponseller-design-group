@@ -1,5 +1,3 @@
-import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
 import AuburnAvenue from "@/public/images/auburn-avenue-cover.png";
 import CarollCreek from "@/public/images/caroll-creek-cover.png";
 import NationalHQ from "@/public/images/national-hq.png";

@@ -28,7 +28,16 @@ const Navbar = () => {
             </p>
           </Link>
 
-          <p className="cursor-pointer hover:underline">Practice</p>
+          <Link href={"/practice"}>
+            <p
+              className={`cursor-pointer hover:underline ${
+                currentPage === "practice" ? "underline" : ""
+              }`}
+              onClick={() => setPage("practice")}
+            >
+              Practice
+            </p>
+          </Link>
 
           <Link href={"/people"}>
             <p
