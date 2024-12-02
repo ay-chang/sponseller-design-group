@@ -35,11 +35,6 @@ const CarollCreek = () => {
 
   return (
     <div>
-      {/* Navbar Section */}
-      <div>
-        <Navbar />
-      </div>
-
       {/* Project Details Section */}
       <div className="mx-12 mt-12 mb-24 flex">
         {/* Left Column: Project Details */}
@@ -121,15 +116,11 @@ const CarollCreek = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
             className="size-6"
           >
-            <path
-              strokeLinecap="round"
-              stroke-linejoin="round"
-              d="m8.25 4.5 7.5 7.5-7.5 7.5"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
           </svg>
         </button>
       </div>
@@ -138,9 +129,6 @@ const CarollCreek = () => {
       <div className="text-sm text-gray-500 text-center mb-12">
         <p>{`${currentIndex + 1} / ${images.length}`}</p>
       </div>
-
-      {/* Footer Section */}
-      <Footer />
     </div>
   );
 };
