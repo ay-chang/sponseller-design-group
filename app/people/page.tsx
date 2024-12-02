@@ -1,4 +1,4 @@
-import PeoplePic from "@/public/images/people.png";
+import PeoplePic from "@/public/images/people.webp";
 import Image from "next/image";
 
 const People = () => {

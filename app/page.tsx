@@ -2,9 +2,7 @@ import Image from "next/image";
 import CoverImage from "../public/images/c1.webp";
 import About from "@/app/components/About";
 import Portfolio from "@/app/components/Portfolio";
-import Practice from "@/app/components/Practice";
 import TestPortfolio from "@/app/components/TestPortfolio";
-import Footer from "@/app/components/Footer";
 
 export default function Home() {
   return (
