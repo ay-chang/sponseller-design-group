@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <div className="mx-12 my-16 text-6xl w-2/3">
-        <p>TEST TEST</p>
+        <p>Sponseller Design Group is where creativity meets structural excellence.</p>
       </div>
       <div className="relative w-screen h-screen">
         <Image src={CoverImage} alt="Cover photo" layout="fill" objectFit="cover" priority />
