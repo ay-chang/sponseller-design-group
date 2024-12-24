@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import CarollCreek1 from "@/public/images/Carroll Creek/caroll-creek-1.png";
-import CarollCreek2 from "@/public/images/Carroll Creek/caroll-creek-2.png";
-import CarollCreek3 from "@/public/images/Carroll Creek/caroll-creek-3.png";
-import CarollCreek4 from "@/public/images/Carroll Creek/caroll-creek-4.png";
-import CarollCreek5 from "@/public/images/Carroll Creek/caroll-creek-5.png";
-import CarollCreek6 from "@/public/images/Carroll Creek/caroll-creek-6.png";
+import CarollCreek1 from "@/public/images/caroll-creek/caroll-creek-1.png";
+import CarollCreek2 from "@/public/images/caroll-creek/caroll-creek-2.png";
+import CarollCreek3 from "@/public/images/caroll-creek/caroll-creek-3.png";
+import CarollCreek4 from "@/public/images/caroll-creek/caroll-creek-4.png";
+import CarollCreek5 from "@/public/images/caroll-creek/caroll-creek-5.png";
+import CarollCreek6 from "@/public/images/caroll-creek/caroll-creek-6.png";
 
 const CarollCreek = () => {
   const images = [
@@ -34,25 +34,25 @@ const CarollCreek = () => {
   return (
     <div>
       {/* Project Details Section */}
-      <div className="mx-12 mt-12 mb-24 flex">
+      <div className="mx-12 mt-12 mb-24 flex gap-28">
         {/* Left Column: Project Details */}
-        <div className="w-1/2">
-          <div className="pb-4">
-            <p className="text-lg text-gray-500 font-medium">Location</p>
-            <p className="text-lg font-medium">Frederick, Maryland</p>
+        <div className="w-4/10">
+          <div className="pb-4 pt-4 flex border-t border-gray-300">
+            <p className="text-sm text-gray-500 font-medium w-1/2">Location</p>
+            <p className="text-sm font-medium w-1/2">Frederick, Maryland</p>
           </div>
-          <div className="pb-4">
-            <p className="text-lg text-gray-500 font-medium">Anticipated Completion</p>
-            <p className="text-lg font-medium">2026</p>
+          <div className="pb-4 pt-4 flex border-t border-gray-300">
+            <p className="text-sm text-gray-500 font-medium w-1/2">Anticipated Completion</p>
+            <p className="text-sm font-medium w-1/2">2026</p>
           </div>
-          <div className="pb-4">
-            <p className="text-lg text-gray-500 font-medium">Program</p>
-            <p className="text-lg font-medium">230 Residences, Retail</p>
+          <div className="pb-4 pt-4 flex border-t border-gray-300">
+            <p className="text-sm text-gray-500 font-medium w-1/2">Program</p>
+            <p className="text-sm font-medium w-1/2">230 Residences, Retail</p>
           </div>
         </div>
 
         {/* Right Column: Project Description */}
-        <div className="w-1/2">
+        <div className="w-6/10">
           <h1 className="text-4xl font-semibold pb-8">Caroll Creek Historic District</h1>
           <p className="text-lg font-medium">
             Located in a historic district on the National Register of Historic Places, the

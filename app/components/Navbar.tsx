@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center mx-12 py-8">
         <div className="">
           <Link href="/">
-            <p className="text-4xl font-bold" onClick={() => setPage("")}>
+            <p className="text-4xl font-medium" onClick={() => setPage("")}>
               SDG
             </p>
           </Link>

@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import AuburnAvenue from "@/public/images/auburn-avenue-cover.png";
-import CarollCreek from "@/public/images/caroll-creek-cover.png";
-import NationalHQ from "@/public/images/national-hq.png";
-import CityRidge from "@/public/images/city-ridge.png";
+import AuburnAvenue from "@/public/images/auburn-avenue/auburn-avenue-1.png";
+import CarollCreek from "@/public/images/caroll-creek/caroll-creek-1.png";
+import NationalHQ from "@/public/images/national-headquarter/national-hq-1.png";
+import CityRidge from "@/public/images/city-ridge/city-ridge-1.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";

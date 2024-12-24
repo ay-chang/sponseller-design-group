@@ -1,15 +1,15 @@
-import AuburnAvenue from "@/public/images/auburn-avenue-cover.png";
-import CarollCreek from "@/public/images/caroll-creek-cover.png";
-import NationalHQ from "@/public/images/national-hq.png";
-import CityRidge from "@/public/images/city-ridge.png";
-import PStreet from "@/public/images/p-street-880.png";
-import Wisconsin from "@/public/images/7272-Wisconsin.png";
-import InternationalHQ from "@/public/images/International-HQ.png";
-import WalterReed from "@/public/images/Walter-Reed.png";
-import UnionMarket from "@/public/images/union-market.png";
-import OldGeorgetown from "@/public/images/old-georgetown.png";
-import FortMeyer from "@/public/images/fort-meyer.png";
-import Bethesda from "@/public/images/bethesda.png";
+import AuburnAvenue from "@/public/images/auburn-avenue/auburn-avenue-1.png";
+import CarollCreek from "@/public/images/caroll-creek/caroll-creek-1.png";
+import NationalHQ from "@/public/images/national-headquarter/national-hq-1.png";
+import CityRidge from "@/public/images/city-ridge/city-ridge-1.png";
+import PStreet from "@/public/images/880-p-street/p-street-880-1.png";
+import Wisconsin from "@/public/images/7272-wisconsin-avenue/wisconsin-1.png";
+import InternationalHQ from "@/public/images/int-corp-hq/international-hq-1.png";
+import WalterReed from "@/public/images/walter-reed/walter-reed-1.png";
+import UnionMarket from "@/public/images/union-market/union-market-1.png";
+import OldGeorgetown from "@/public/images/7607-old-georgetown/old-georgetown-1.png";
+import SilverSpring from "@/public/images/silver-spring/silver-spring-1.png";
+import Bethesda from "@/public/images/4747-bethesda-avenue/bethesda-1.png";
 import Image from "next/image";
 import Link from "next/link";
 import type { StaticImageData } from "next/image";
@@ -25,11 +25,11 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ href = "/", src, alt, title, subtitle }) => {
   const cardContent = (
     <div>
-      <div className="h-120 2xl:h-160 w-full overflow-hidden">
+      <div className="h-110 2xl:h-160 w-full overflow-hidden">
         <Image
           src={src}
           alt={alt}
-          className="w-full h-120 xl:h-160 object-cover hover:scale-110 duration-300"
+          className="w-full h-110 xl:h-160 object-cover hover:scale-110 duration-300"
           loading="lazy"
         />
       </div>
@@ -74,6 +74,7 @@ const Projects = () => {
           subtitle="Residences / Retail"
         />
         <Card
+          href="/projects/auburn-avenue"
           src={AuburnAvenue}
           alt="Auburn Avenue Residences"
           title="Auburn Avenue"
@@ -110,9 +111,9 @@ const Projects = () => {
           subtitle="Residences / Retail"
         />
         <Card
-          src={FortMeyer}
-          alt="Fort Meyer Residential"
-          title="Fort Meyer"
+          src={SilverSpring}
+          alt="Silver Spring Residential"
+          title="Silver Spring"
           subtitle="Residences / Retail"
         />
         <Card
