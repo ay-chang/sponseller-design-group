@@ -25,11 +25,11 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ href = "/", src, alt, title, subtitle }) => {
   const cardContent = (
     <div>
-      <div className="h-110 2xl:h-160 w-full overflow-hidden">
+      <div className="h-120 2xl:h-160 w-full overflow-hidden">
         <Image
           src={src}
           alt={alt}
-          className="w-full h-110 xl:h-160 object-cover hover:scale-110 duration-300"
+          className="w-full h-120 xl:h-160 object-cover hover:scale-110 duration-300"
           loading="lazy"
         />
       </div>
@@ -55,6 +55,7 @@ const Projects = () => {
       {/* Grid View */}
       <div className="grid grid-cols-2 gap-y-12 gap-x-4 mx-12 mb-24">
         <Card
+          href="/projects/city-ridge"
           src={CityRidge}
           alt="City Ridge"
           title="City Ridge"
@@ -68,6 +69,7 @@ const Projects = () => {
           subtitle="Residences / Retail"
         />
         <Card
+          href="/projects/national-hq"
           src={NationalHQ}
           alt="National Headquarters"
           title="National Headquarters"
@@ -81,51 +83,59 @@ const Projects = () => {
           subtitle="Residences"
         />
         <Card
+          href="/projects/880-p-street-nw"
           src={PStreet}
           alt="P Street Development"
-          title="P Street"
+          title="880 P Street NW"
           subtitle="Mixed-Use Development"
         />
         <Card
+          href="/projects/7607-old-georgetown-road"
           src={OldGeorgetown}
           alt="Old Georgetown"
-          title="Old Georgetown"
+          title="7607 Old Georgetown Road"
           subtitle="Historic Redevelopment"
         />
         <Card
+          href="/projects/international-corporate-headquarters"
           src={InternationalHQ}
-          alt="International Headquarters"
-          title="International Headquarters"
+          alt="International Corporate Headquarters"
+          title="International Corporate Headquarters"
           subtitle="Corporate Office"
         />
         <Card
+          href="/projects/7272-wisconsin-avenue"
           src={Wisconsin}
           alt="7272 Wisconsin"
-          title="7272 Wisconsin"
+          title="7272 Wisconsin Avenue"
           subtitle="Mixed-Use Development"
         />
         <Card
+          href="/projects/walter-reed-master-plan"
           src={WalterReed}
           alt="Walter Reed Development"
-          title="Walter Reed"
-          subtitle="Residences / Retail"
+          title="Walter Reed Master Plan"
+          subtitle="Mixed-Use Development"
         />
         <Card
+          href="/projects/silver-spring-vision"
           src={SilverSpring}
           alt="Silver Spring Residential"
           title="Silver Spring"
-          subtitle="Residences / Retail"
+          subtitle="Mixed-Use Development"
         />
         <Card
+          href="/projects/union-market"
           src={UnionMarket}
           alt="Union Market"
           title="Union Market"
-          subtitle="Commercial / Retail"
+          subtitle="Residential"
         />
         <Card
+          href="/projects/4747-bethesda-avenue"
           src={Bethesda}
           alt="Bethesda Development"
-          title="Bethesda"
+          title="4747 Bethesda Avenue"
           subtitle="Corporate Headquarters / Retail"
         />
       </div>
