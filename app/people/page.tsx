@@ -1,5 +1,5 @@
-// import PeoplePic from "@/public/images/people.png";
-// import Image from "next/image";
+import PeoplePic from "@/public/images/people.webp";
+import Image from "next/image";
 
 const People = () => {
   return (
@@ -20,7 +20,7 @@ const People = () => {
           </p>
         </div>
         <div className="w-1/2">
-          {/* <Image src={PeoplePic} alt="People picture" className="w-full h-full object-cover" /> */}
+          <Image src={PeoplePic} alt="People picture" className="w-full h-full object-cover" />
         </div>
       </div>
 

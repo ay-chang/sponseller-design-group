@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="">
           <Link href="/">
             <p className="text-4xl font-medium" onClick={() => setPage("")}>
-              SDG
+              Sponseller Design Group
             </p>
           </Link>
         </div>
@@ -20,11 +20,11 @@ const Navbar = () => {
           <Link href="/projects">
             <p
               className={`cursor-pointer hover:underline ${
-                currentPage === "works" ? "underline" : ""
+                currentPage === "projects" ? "underline" : ""
               }`}
-              onClick={() => setPage("works")}
+              onClick={() => setPage("projects")}
             >
-              Works
+              Projects
             </p>
           </Link>
 
@@ -49,7 +49,17 @@ const Navbar = () => {
               People
             </p>
           </Link>
-          <p className="cursor-pointer hover:underline">Careers</p>
+
+          <Link href={"/inquiries"}>
+            <p
+              className={`cursor-pointer hover:underline ${
+                currentPage === "inquiries" ? "underline" : ""
+              }`}
+              onClick={() => setPage("inquiries")}
+            >
+              Inquiries
+            </p>
+          </Link>
         </div>
       </div>
     </div>

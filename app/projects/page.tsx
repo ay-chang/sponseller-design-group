@@ -24,12 +24,12 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ href = "/", src, alt, title, subtitle }) => {
   const cardContent = (
-    <div>
+    <div className="cursor-pointer">
       <div className="h-120 2xl:h-160 w-full overflow-hidden">
         <Image
           src={src}
           alt={alt}
-          className="w-full h-120 xl:h-160 object-cover hover:scale-110 duration-300"
+          className="w-full h-120 xl:h-160 object-cover hover:scale-110 duration-500"
           loading="lazy"
         />
       </div>

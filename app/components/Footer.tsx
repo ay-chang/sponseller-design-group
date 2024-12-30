@@ -5,7 +5,7 @@ const Footer = () => {
       <div className="flex justify-between">
         {/* Logo Section */}
         <div className="text-5xl font-bold">
-          <p>SDG</p>
+          <p>Sponseller Design Group</p>
         </div>
 
         <div className="flex gap-8">
