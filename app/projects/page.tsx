@@ -8,8 +8,10 @@ import InternationalHQ from "@/public/images/int-corp-hq/international-hq-1.png"
 import WalterReed from "@/public/images/walter-reed/walter-reed-1.png";
 import UnionMarket from "@/public/images/union-market/union-market-1.png";
 import OldGeorgetown from "@/public/images/7607-old-georgetown/old-georgetown-1.png";
-import SilverSpring from "@/public/images/silver-spring/silver-spring-1.png";
+import FortMeyer from "@/public/images/1820-fort-meyer/fort-meyer-1.png";
 import Bethesda from "@/public/images/4747-bethesda-avenue/bethesda-1.png";
+import Greenbelt from "@/public/images/green-belt/green-belt-1.png";
+import SilverSpring from "@/public/images/silver-spring/silver-spring-1.png";
 import Image from "next/image";
 import Link from "next/link";
 import type { StaticImageData } from "next/image";
@@ -118,10 +120,10 @@ const Projects = () => {
           subtitle="Mixed-Use Development"
         />
         <Card
-          href="/projects/silver-spring-vision"
-          src={SilverSpring}
-          alt="Silver Spring Residential"
-          title="Silver Spring"
+          href="/projects/1820-fort-meyer"
+          src={FortMeyer}
+          alt="Fort Meyer"
+          title="1820 Fort Meyer"
           subtitle="Mixed-Use Development"
         />
         <Card
@@ -137,6 +139,20 @@ const Projects = () => {
           alt="Bethesda Development"
           title="4747 Bethesda Avenue"
           subtitle="Corporate Headquarters / Retail"
+        />
+        <Card
+          href="/projects/historic-greenbelt-master-plan"
+          src={Greenbelt}
+          alt="Greenbelt"
+          title="Historic Greenbelt Master Plan"
+          subtitle="Office, Hotel, Residential, Townhomes"
+        />
+        <Card
+          href="/projects/silver-spring-vision"
+          src={SilverSpring}
+          alt="Silver Spring"
+          title="Silver Spring Vision"
+          subtitle="Mixed-Use Development"
         />
       </div>
     </div>
