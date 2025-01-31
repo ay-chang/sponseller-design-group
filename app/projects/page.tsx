@@ -27,15 +27,15 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ href = "/", src, alt, title, subtitle }) => {
   const cardContent = (
     <div className="cursor-pointer">
-      <div className="h-120 2xl:h-160 w-full overflow-hidden">
+      <div className="max-h-100 2xl:max-h-96 overflow-hidden">
         <Image
           src={src}
           alt={alt}
-          className="w-full h-120 xl:h-160 object-cover hover:scale-110 duration-500"
+          className="w-full max-h-100 2xl:max-h-96 min-h-44 object-cover hover:scale-98 duration-500"
           loading="lazy"
         />
       </div>
-      <p className="text-lg py-4">{title}</p>
+      <p className="text-sm pt-2">{title}</p>
       <p className="text-sm text-gray-500">{subtitle}</p>
     </div>
   );
@@ -50,12 +50,8 @@ const Card: React.FC<CardProps> = ({ href = "/", src, alt, title, subtitle }) =>
 const Projects = () => {
   return (
     <div>
-      <div className="mx-12 my-16 text-6xl w-2/3">
-        <p>Discover how we transform ideas into architectural statements.</p>
-      </div>
-
       {/* Grid View */}
-      <div className="grid grid-cols-2 gap-y-12 gap-x-4 mx-12 mb-24">
+      <div className="grid grid-cols-3 2xl:grid-cols-5 gap-y-24 gap-x-24 mx-12 my-24 items-center">
         <Card
           href="/projects/city-ridge"
           src={CityRidge}
@@ -64,12 +60,20 @@ const Projects = () => {
           subtitle="Office / Residences / Retail"
         />
         <Card
+          href="/projects/880-p-street-nw"
+          src={PStreet}
+          alt="P Street Development"
+          title="880 P Street NW"
+          subtitle="Mixed-Use Development"
+        />
+        <Card
           href="/projects/caroll-creek"
           src={CarollCreek}
           alt="Caroll Creek Historic District"
           title="Caroll Creek Historic District"
           subtitle="Residences / Retail"
         />
+
         <Card
           href="/projects/national-hq"
           src={NationalHQ}
@@ -84,12 +88,13 @@ const Projects = () => {
           title="Auburn Avenue"
           subtitle="Residences"
         />
+
         <Card
-          href="/projects/880-p-street-nw"
-          src={PStreet}
-          alt="P Street Development"
-          title="880 P Street NW"
-          subtitle="Mixed-Use Development"
+          href="/projects/4747-bethesda-avenue"
+          src={Bethesda}
+          alt="Bethesda Development"
+          title="4747 Bethesda Avenue"
+          subtitle="Corporate Headquarters / Retail"
         />
         <Card
           href="/projects/7607-old-georgetown-road"
@@ -134,11 +139,11 @@ const Projects = () => {
           subtitle="Residential"
         />
         <Card
-          href="/projects/4747-bethesda-avenue"
-          src={Bethesda}
-          alt="Bethesda Development"
-          title="4747 Bethesda Avenue"
-          subtitle="Corporate Headquarters / Retail"
+          href="/projects/silver-spring-vision"
+          src={SilverSpring}
+          alt="Silver Spring"
+          title="Silver Spring Vision"
+          subtitle="Mixed-Use Development"
         />
         <Card
           href="/projects/historic-greenbelt-master-plan"
@@ -146,13 +151,6 @@ const Projects = () => {
           alt="Greenbelt"
           title="Historic Greenbelt Master Plan"
           subtitle="Office, Hotel, Residential, Townhomes"
-        />
-        <Card
-          href="/projects/silver-spring-vision"
-          src={SilverSpring}
-          alt="Silver Spring"
-          title="Silver Spring Vision"
-          subtitle="Mixed-Use Development"
         />
       </div>
     </div>

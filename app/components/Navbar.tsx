@@ -7,16 +7,16 @@ const Navbar = () => {
   const [currentPage, setPage] = useState("");
 
   return (
-    <div className="w-full bg-white text-black">
+    <div className="w-full bg-white text-gray-700">
       <div className="flex justify-between items-center mx-12 py-8">
         <div className="">
           <Link href="/">
-            <p className="text-4xl font-medium" onClick={() => setPage("")}>
+            <p className="text-xl font-medium" onClick={() => setPage("")}>
               Sponseller Design Group
             </p>
           </Link>
         </div>
-        <div className="flex space-x-6 text-lg">
+        <div className="flex space-x-6 text-md">
           <Link href="/projects">
             <p
               className={`cursor-pointer hover:underline ${
@@ -24,7 +24,7 @@ const Navbar = () => {
               }`}
               onClick={() => setPage("projects")}
             >
-              Projects
+              Works
             </p>
           </Link>
 
@@ -50,7 +50,7 @@ const Navbar = () => {
             </p>
           </Link>
 
-          <Link href="/news">
+          {/* <Link href="/news">
             <p
               className={`cursor-pointer hover:underline ${
                 currentPage === "news" ? "underline" : ""
@@ -59,7 +59,7 @@ const Navbar = () => {
             >
               News
             </p>
-          </Link>
+          </Link> */}
 
           <Link href={"/inquiries"}>
             <p

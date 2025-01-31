@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="mx-48 2xl:mx-96 mt-64 mb-36 xl:mb-64">
+    <div className="mx-36 2xl:mx-96 mt-36 mb-36 xl:mb-64">
       {/* Top Section */}
       <div className="mb-8">
         <p className="text-sm 2xl:text-md uppercase text-gray-500 tracking-wide">
