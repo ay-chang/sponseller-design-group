@@ -17,8 +17,9 @@ export default function Home() {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % coverImages.length);
       }, 800);
     }, 10000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [coverImages.length]);
 
   return (
     <div>

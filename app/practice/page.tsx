@@ -29,9 +29,10 @@ const Practice = () => {
               positively impact our human experience. We begin every project with a thorough
               design process rooted in the importance of place, respect for the environment and
               design innovation. We are a group of passionate, highly experienced practitioners
-              with thirty years' experience on master plans, individual buildings, adaptive
-              reuse and historic preservation in the Washington DC area. Our principals have
-              successfully worked on the most challenging entitlements sites in the region.
+              with thirty years&apos; experience on master plans, individual buildings,
+              adaptive reuse and historic preservation in the Washington DC area. Our
+              principals have successfully worked on the most challenging entitlements sites in
+              the region.
             </p>
           </div>
 
