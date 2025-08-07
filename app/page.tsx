@@ -8,42 +8,37 @@ import CoverImage3 from "../public/images/7272-wisconsin-avenue/wisconsin-1.png"
 import News from "@/app/components/News";
 
 export default function Home() {
-  // Array of cover images
   const coverImages = [CoverImage, CoverImage2, CoverImage3];
-
-  // State for current image and fade effect
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % coverImages.length);
-      }, 800); // Match fade duration with transition
-    }, 10000); // Change image every 7 seconds
-
+      }, 800);
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div>
       {/* Cover Image Container */}
-      <div className="relative h-[calc(100vh-195px)] mx-48 my-12 overflow-hidden">
+      <div className="relative h-[calc(100vh-180px)] sm:h-[calc(100vh-195px)] 2xl:h-[calc(100vh-290px)] mx-4 sm:mx-48 2xl:mx-96 my-8 sm:my-12 2xl:my-24 overflow-hidden">
         {coverImages.map((image, index) => (
           <Image
             key={index}
             src={image}
             alt="Cover photo"
-            layout="fill"
-            objectFit="cover"
-            priority
+            fill
             className={`absolute inset-0 object-cover transition-opacity duration-700 ${
               index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
+            priority
           />
         ))}
       </div>
 
-      {/* <About /> */}
+      {/* News Section */}
       <div>
         <News />
       </div>

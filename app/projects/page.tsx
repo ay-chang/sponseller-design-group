@@ -12,6 +12,8 @@ import FortMeyer from "@/public/images/1820-fort-meyer/fort-meyer-1.png";
 import Bethesda from "@/public/images/4747-bethesda-avenue/bethesda-1.png";
 import Greenbelt from "@/public/images/green-belt/green-belt-1.png";
 import SilverSpring from "@/public/images/silver-spring/silver-spring-1.png";
+import MarylandMaster from "@/public/images/maryland-master/maryland-master-1.png";
+import SignatureSite from "@/public/images/signature-site/signature-site-1.png";
 import Image from "next/image";
 import Link from "next/link";
 import type { StaticImageData } from "next/image";
@@ -27,11 +29,11 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ href = "/", src, alt, title, subtitle }) => {
   const cardContent = (
     <div className="cursor-pointer">
-      <div className="max-h-100 2xl:max-h-96 overflow-hidden">
+      <div className="max-h-110 2xl:max-h-400 overflow-hidden">
         <Image
           src={src}
           alt={alt}
-          className="w-full max-h-100 2xl:max-h-96 min-h-44 object-cover hover:scale-98 duration-500"
+          className="w-full max-h-110 2xl:max-h-400 min-h-44 object-cover hover:scale-98 duration-500"
           loading="lazy"
         />
       </div>
@@ -51,13 +53,20 @@ const Projects = () => {
   return (
     <div>
       {/* Grid View */}
-      <div className="grid grid-cols-3 2xl:grid-cols-5 gap-y-24 gap-x-24 mx-12 my-24 items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-3 2xl:grid-cols-3 gap-y-24 gap-x-12 mx-4 sm:mx-24 2xl:mx-24 my-24 items-center">
         <Card
-          href="/projects/city-ridge"
-          src={CityRidge}
-          alt="City Ridge"
-          title="City Ridge"
-          subtitle="Office / Residences / Retail"
+          href="/projects/caroll-creek"
+          src={CarollCreek}
+          alt="Caroll Creek Historic District"
+          title="Caroll Creek Historic District"
+          subtitle="Residences / Retail"
+        />
+        <Card
+          href="/projects/national-hq"
+          src={NationalHQ}
+          alt="National Headquarters"
+          title="National Headquarters"
+          subtitle="Residences / Retail"
         />
         <Card
           href="/projects/880-p-street-nw"
@@ -67,62 +76,11 @@ const Projects = () => {
           subtitle="Mixed-Use Development"
         />
         <Card
-          href="/projects/caroll-creek"
-          src={CarollCreek}
-          alt="Caroll Creek Historic District"
-          title="Caroll Creek Historic District"
-          subtitle="Residences / Retail"
-        />
-
-        <Card
-          href="/projects/national-hq"
-          src={NationalHQ}
-          alt="National Headquarters"
-          title="National Headquarters"
-          subtitle="Residences / Retail"
-        />
-        <Card
-          href="/projects/auburn-avenue"
-          src={AuburnAvenue}
-          alt="Auburn Avenue Residences"
-          title="Auburn Avenue"
-          subtitle="Residences"
-        />
-
-        <Card
-          href="/projects/4747-bethesda-avenue"
-          src={Bethesda}
-          alt="Bethesda Development"
-          title="4747 Bethesda Avenue"
-          subtitle="Corporate Headquarters / Retail"
-        />
-        <Card
-          href="/projects/7607-old-georgetown-road"
-          src={OldGeorgetown}
-          alt="Old Georgetown"
-          title="7607 Old Georgetown Road"
-          subtitle="Historic Redevelopment"
-        />
-        <Card
-          href="/projects/international-corporate-headquarters"
-          src={InternationalHQ}
-          alt="International Corporate Headquarters"
-          title="International Corporate Headquarters"
-          subtitle="Corporate Office"
-        />
-        <Card
-          href="/projects/7272-wisconsin-avenue"
-          src={Wisconsin}
-          alt="7272 Wisconsin"
-          title="7272 Wisconsin Avenue"
-          subtitle="Mixed-Use Development"
-        />
-        <Card
-          href="/projects/walter-reed-master-plan"
-          src={WalterReed}
-          alt="Walter Reed Development"
-          title="Walter Reed Master Plan"
-          subtitle="Mixed-Use Development"
+          href="/projects/historic-greenbelt-master-plan"
+          src={Greenbelt}
+          alt="Greenbelt"
+          title="Historic Greenbelt Master Plan"
+          subtitle="Office, Hotel, Residential, Townhomes"
         />
         <Card
           href="/projects/1820-fort-meyer"
@@ -132,11 +90,53 @@ const Projects = () => {
           subtitle="Mixed-Use Development"
         />
         <Card
-          href="/projects/union-market"
-          src={UnionMarket}
-          alt="Union Market"
-          title="Union Market"
-          subtitle="Residential"
+          href="/projects/7272-wisconsin-avenue"
+          src={Wisconsin}
+          alt="7272 Wisconsin"
+          title="7272 Wisconsin Avenue"
+          subtitle="Mixed-Use Development"
+        />
+        <Card
+          href="/projects/maryland-master"
+          src={MarylandMaster}
+          alt="MarylandMaster"
+          title="Maryland Master Plan"
+          subtitle="Office / Residences / Retail"
+        />
+        <Card
+          href="/projects/7607-old-georgetown-road"
+          src={OldGeorgetown}
+          alt="Old Georgetown"
+          title="7607 Old Georgetown Road"
+          subtitle="Historic Redevelopment"
+        />
+        <Card
+          href="/projects/4747-bethesda-avenue"
+          src={Bethesda}
+          alt="Bethesda Development"
+          title="4747 Bethesda Avenue"
+          subtitle="Corporate Headquarters / Retail"
+        />
+        <Card
+          href="/projects/walter-reed-master-plan"
+          src={WalterReed}
+          alt="Walter Reed Development"
+          title="Walter Reed Master Plan"
+          subtitle="Mixed-Use Development"
+        />
+        <Card
+          href="/projects/international-corporate-headquarters"
+          src={InternationalHQ}
+          alt="International Corporate Headquarters"
+          title="International Corporate Headquarters"
+          subtitle="Corporate Office"
+        />
+        <Card
+          href="/projects/auburn-avenue"
+          src={AuburnAvenue}
+          alt="Auburn Avenue Residences"
+          title="Auburn Avenue"
+          subtitle="Residences"
         />
         <Card
           href="/projects/silver-spring-vision"
@@ -146,11 +146,27 @@ const Projects = () => {
           subtitle="Mixed-Use Development"
         />
         <Card
-          href="/projects/historic-greenbelt-master-plan"
-          src={Greenbelt}
-          alt="Greenbelt"
-          title="Historic Greenbelt Master Plan"
-          subtitle="Office, Hotel, Residential, Townhomes"
+          href="/projects/city-ridge"
+          src={CityRidge}
+          alt="City Ridge"
+          title="City Ridge"
+          subtitle="Office / Residences / Retail"
+        />
+
+        <Card
+          href="/projects/signature-site"
+          src={SignatureSite}
+          alt="Signature Site"
+          title="Signature Site Reston"
+          subtitle="Mixed-Use Development"
+        />
+
+        <Card
+          href="/projects/union-market"
+          src={UnionMarket}
+          alt="Union Market"
+          title="Union Market"
+          subtitle="Residential"
         />
       </div>
     </div>

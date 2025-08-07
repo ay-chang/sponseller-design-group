@@ -19,15 +19,6 @@ const ProjectSkeleton = ({
   Images: StaticImageData[];
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [openProjectDetails, setOpenProjectDetails] = useState(false);
-
-  // Disable scrolling on mount
-  // useEffect(() => {
-  //   document.body.style.overflow = "hidden"; // Prevent scrolling
-  //   return () => {
-  //     document.body.style.overflow = "auto"; // Restore scrolling if component unmounts
-  //   };
-  // }, []);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? Images.length - 1 : prevIndex - 1));
@@ -37,64 +28,98 @@ const ProjectSkeleton = ({
     setCurrentIndex((prevIndex) => (prevIndex === Images.length - 1 ? 0 : prevIndex + 1));
   };
 
-  // Custom smooth scrolling function to control speed
-  const smoothScrollTo = (targetY: number, duration: number = 1000) => {
-    const startY = window.scrollY;
-    const startTime = performance.now();
-
-    const scrollStep = (currentTime: number) => {
-      const elapsedTime = currentTime - startTime;
-      const progress = Math.min(elapsedTime / duration, 1);
-      const easing =
-        progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2;
-      window.scrollTo(0, startY + (targetY - startY) * easing);
-
-      if (progress < 1) {
-        requestAnimationFrame(scrollStep);
-      }
-    };
-
-    requestAnimationFrame(scrollStep);
-  };
-
-  const scrollToInfo = () => {
-    const infoSection = document.getElementById("info-section");
-    if (infoSection) {
-      smoothScrollTo(infoSection.offsetTop, 1500); // Slows down to 1.5s
-    }
-  };
-
-  const scrollToTop = () => {
-    smoothScrollTo(0, 1500); // Scroll back to top in 1.5s
-  };
-
-  const handleProjectDetails = () => {
-    setOpenProjectDetails(!openProjectDetails);
-  };
-
   return (
     <div className="overflow-auto">
-      {/* Top Image Section */}
-      <div id="top-section" className="flex flex-col items-center">
-        <div className="flex items-center mx-12 my-6">
-          <button onClick={handlePrev} className="text-black px-8 py-7 rounded-lg">
+      {/* === MOBILE LAYOUT === */}
+      <div className="sm:hidden mx-4 my-6">
+        {/* Arrows + Frame Count */}
+        <div className="flex justify-between items-center mb-4">
+          <div className="flex gap-2">
+            <button onClick={handlePrev} className="text-black p-2 rounded-lg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M15.75 19.5 8.25 12l7.5-7.5"
+                />
+              </svg>
+            </button>
+            <button onClick={handleNext} className="text-black p-2 rounded-lg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <div className="text-sm text-gray-600">
+            {currentIndex + 1} / {Images.length}
+          </div>
+        </div>
+
+        {/* Image */}
+        <div className="relative w-full h-[300px] overflow-hidden">
+          <div className="relative w-full h-full">
+            {Images.map((image, index) => (
+              <Image
+                key={index}
+                src={image}
+                alt={`Project Image ${index + 1}`}
+                className={`absolute inset-0 object-contain transition-opacity duration-700 ${
+                  index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+                fill
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Caption Below Image */}
+        <div className="flex justify-between items-center text-sm text-gray-600 font-light mt-6">
+          <div>Read Info Below</div>
+          <div className="font-medium text-black">{Title}</div>
+        </div>
+      </div>
+
+      {/* === DESKTOP LAYOUT === */}
+      <div className="hidden sm:flex flex-col items-center mx-24 2xl:mx-24 2xl:my-24 my-12">
+        <div className="flex items-center gap-6">
+          {/* Prev */}
+          <button onClick={handlePrev} className="text-black px-6 py-6 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
-              strokeWidth="1.5"
               stroke="currentColor"
-              className="size-6"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                strokeWidth={1.5}
                 d="M15.75 19.5 8.25 12l7.5-7.5"
               />
             </svg>
           </button>
 
-          <div className="relative overflow-hidden h-[600px] w-[900px] max-w-full mx-auto">
+          {/* Image */}
+          <div className="relative h-[600px] w-[900px] max-w-full">
             <div className="relative h-full w-full">
               {Images.map((image, index) => (
                 <Image
@@ -104,105 +129,84 @@ const ProjectSkeleton = ({
                   className={`absolute inset-0 object-contain transition-opacity duration-700 ${
                     index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
                   }`}
-                  style={{ height: "600px", maxWidth: "100%" }}
+                  fill
                 />
               ))}
             </div>
           </div>
 
-          <button onClick={handleNext} className="text-black px-8 py-8 rounded-lg">
+          {/* Next */}
+          <button onClick={handleNext} className="text-black px-6 py-6 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
-              strokeWidth="1.5"
               stroke="currentColor"
-              className="size-6"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                strokeWidth={1.5}
                 d="m8.25 4.5 7.5 7.5-7.5 7.5"
               />
             </svg>
           </button>
         </div>
-      </div>
 
-      {/* Captions */}
-      <div className="flex justify-between text-xl font-light text-gray-600 py-8 mx-12">
-        {/* Read Info Button */}
-        <button
-          onClick={scrollToInfo}
-          className="hover:text-gray-600 transition text-gray-500"
-        >
-          Read Info
-        </button>
-        {/* Title */}
-        <div className="">
-          <h1 className="">{Title}</h1>
-        </div>
-        {/* Caption */}
-        <div className="">
-          <p>
-            {currentIndex + 1} / {Images.length}
-          </p>
-        </div>
-      </div>
-
-      {/* Info Section */}
-      <div id="info-section" className="mx-12  pt-24 min-h-screen relative">
-        <div className="">
-          {/* Project Description */}
-          <div className="w-2/3 pb-8">
-            <p className="text-lg font-medium leading-relaxed pb-4">{Description}</p>
-            <p className="text-lg font-medium leading-relaxed">{Description}</p>
+        {/* Caption Below Image */}
+        <div className="relative text-xl font-light text-gray-600 w-full px-4 mt-8 2xl:mt-42">
+          {/* Left */}
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 text-gray-500">
+            Project Information
           </div>
+          {/* Center */}
+          <div className="text-center">
+            <h1 className="font-normal text-black">{Title}</h1>
+          </div>
+          {/* Right */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2">
+            <p>
+              {currentIndex + 1} / {Images.length}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* === Info Section === */}
+      <div id="info-section" className="mx-4 sm:mx-24 2xl:mx-24 mt-12 2xl:mt-36 min-h-screen">
+        {/* Description */}
+        <div className="w-full sm:w-9/10 2xl:w-2/5 pb-8">
+          <p className="text-base sm:text-lg font-normal leading-relaxed pb-4">
+            {Description}
+          </p>
         </div>
 
         {/* Project Details */}
-        <div>
+        <div className="w-full sm:w-[40%]">
           <div className="text-sm text-gray-500 cursor-pointer w-fit">
-            <p onClick={handleProjectDetails}>
-              {openProjectDetails ? "- Project Details" : "+ Project Details"}
-            </p>
+            <p>Project Details</p>
           </div>
-          <div
-            className={`w-4/10 pl-3 pt-4 transition-opacity duration-500 ${
-              openProjectDetails ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
-          >
+          <div className="pt-4 transition-opacity duration-500 opacity-100">
             {Location && (
-              <div className="flex pb-2 border-gray-300">
+              <div className="flex pb-2">
                 <p className="text-sm text-gray-500 w-1/2">Location</p>
                 <p className="text-sm font-medium w-1/2">{Location}</p>
               </div>
             )}
-
             {Completion && (
-              <div className="flex py-2 border-gray-300">
+              <div className="flex py-2">
                 <p className="text-sm text-gray-500 w-1/2">Anticipated Completion</p>
                 <p className="text-sm font-medium w-1/2">{Completion}</p>
               </div>
             )}
-
             {Program && (
-              <div className="py-2 flex border-gray-300">
-                <p className="text-sm text-gray-500 w-1/2">Program: </p>
+              <div className="py-2 flex">
+                <p className="text-sm text-gray-500 w-1/2">Program</p>
                 <p className="text-sm font-medium w-1/2">{Program}</p>
               </div>
             )}
           </div>
-        </div>
-
-        {/* Back to Top Button */}
-        <div className="absolute bottom-6">
-          <button
-            onClick={scrollToTop}
-            className="hover:text-gray-600 transition text-xl font-light text-gray-500"
-          >
-            View Images
-          </button>
         </div>
       </div>
     </div>
