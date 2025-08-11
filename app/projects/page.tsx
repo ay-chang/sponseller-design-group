@@ -24,16 +24,24 @@ interface CardProps {
   alt: string;
   title: string;
   subtitle: string;
+  imageClassName?: string;
 }
 
-const Card: React.FC<CardProps> = ({ href = "/", src, alt, title, subtitle }) => {
+const Card: React.FC<CardProps> = ({
+  href = "/",
+  src,
+  alt,
+  title,
+  subtitle,
+  imageClassName = "",
+}) => {
   const cardContent = (
     <div className="cursor-pointer">
       <div className="max-h-110 2xl:max-h-400 overflow-hidden">
         <Image
           src={src}
           alt={alt}
-          className="w-full max-h-110 2xl:max-h-400 min-h-44 object-cover hover:scale-98 duration-500"
+          className={`w-full max-h-110 2xl:max-h-400 min-h-44 object-cover hover:scale-98 duration-500 ${imageClassName}`}
           loading="lazy"
         />
       </div>
@@ -53,7 +61,7 @@ const Projects = () => {
   return (
     <div>
       {/* Grid View */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 2xl:grid-cols-3 gap-y-24 gap-x-12 mx-4 sm:mx-24 2xl:mx-24 my-24 items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-3 2xl:grid-cols-3 gap-y-24 gap-x-20 mx-4 sm:mx-24 2xl:mx-24 my-24 items-center">
         <Card
           href="/projects/caroll-creek"
           src={CarollCreek}
@@ -97,18 +105,19 @@ const Projects = () => {
           subtitle="Mixed-Use Development"
         />
         <Card
-          href="/projects/maryland-master"
-          src={MarylandMaster}
-          alt="MarylandMaster"
-          title="Maryland Master Plan"
-          subtitle="Office / Residences / Retail"
-        />
-        <Card
           href="/projects/7607-old-georgetown-road"
           src={OldGeorgetown}
           alt="Old Georgetown"
           title="7607 Old Georgetown Road"
           subtitle="Historic Redevelopment"
+          imageClassName="object-[center_0%]"
+        />
+        <Card
+          href="/projects/maryland-master"
+          src={MarylandMaster}
+          alt="MarylandMaster"
+          title="Maryland Master Plan"
+          subtitle="Office / Residences / Retail"
         />
         <Card
           href="/projects/4747-bethesda-avenue"

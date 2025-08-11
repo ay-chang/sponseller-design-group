@@ -24,7 +24,7 @@ const Card: React.FC<CardProps> = ({ src, alt, title, story }) => {
 
       {/* Story */}
       <div className="text-sm lg:w-1/3 relative">
-        <p className={`overflow-hidden ${isExpanded ? "line-clamp-none" : "line-clamp-2"}`}>
+        <p className={`overflow-hidden ${isExpanded ? "line-clamp-none" : "line-clamp-3"}`}>
           {story}
         </p>
         <button
