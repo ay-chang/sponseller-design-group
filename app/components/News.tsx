@@ -58,6 +58,12 @@ const News = () => {
 
         {/* News Items */}
         <Card
+          src={MackenzieGallery}
+          alt="Cross Mackenzie Gallery"
+          title="Cross Mackenzie Gallery"
+          story="Sponseller Design Group is among a select  group of local architects invited to participate in an exhibition at VizArts Gallery in Maryland this Fall. The exhibition focuses on organic formal expressions in architecture and ceramics. Our submission, titled sky vaults documents a current adaptive re-use international headquarters project currently in design development."
+        />
+        <Card
           src={PStreet}
           alt="Caroll Creek News"
           title="Carroll Creek receives Historic Preservation Commission Approval"
@@ -68,12 +74,6 @@ const News = () => {
           alt="Int Headquarters new"
           title="Groundbreaking - International Headquarters in Virginia"
           story="Construction has begun on the adaptive reuse and expansion of an existing building to become a private company's international headquarters in Virginia. The project is highly sustainable and includes geothermal wells and rooftop solar panels as part of its on-site energy generation. Project completion is expected in 2026."
-        />
-        <Card
-          src={MackenzieGallery}
-          alt="Cross Mackenzie Gallery"
-          title="Cross Mackenzie Gallery"
-          story="Sponseller Design Group is among a select  group of local architects invited to participate in an exhibition at VizArts Gallery in Maryland this Fall. The exhibition focuses on organic formal expressions in architecture and ceramics. Our submission, titled sky vaults documents a current adaptive re-use international headquarters project currently in design development."
         />
       </div>
     </div>

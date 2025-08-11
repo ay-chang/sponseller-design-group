@@ -61,7 +61,7 @@ const Projects = () => {
   return (
     <div>
       {/* Grid View */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 2xl:grid-cols-4 gap-y-24 gap-x-20 mx-4 sm:mx-24 2xl:mx-24 my-24 items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-3 2xl:grid-cols-3 gap-y-24 gap-x-20 mx-4 sm:mx-24 2xl:mx-24 my-24 items-center">
         <Card
           href="/projects/caroll-creek"
           src={CarollCreek}
