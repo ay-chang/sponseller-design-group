@@ -16,7 +16,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden sm:flex space-x-6 text-md">
+        <div className="hidden sm:flex space-x-6 text-md text-gray-500">
           <Link href="/projects">
             <p
               className={`cursor-pointer hover:underline ${

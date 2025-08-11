@@ -6,7 +6,7 @@ const Practice = () => {
     <div className="mx-4 sm:mx-24 2xl:mx-24 pb-24 2xl:pb-48">
       {/* Banner */}
       <div className="my-12 sm:my-16 text-3xl sm:text-5xl 2xl:text-6xl w-full sm:w-3/4 text-left sm:text-left">
-        <p>Our practice blends design excellence with lasting client relationships.</p>
+        <p>Our practice blends excellence with lasting client relationships.</p>
       </div>
 
       <div className="flex flex-col sm:flex-row gap-12 sm:gap-24">

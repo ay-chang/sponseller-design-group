@@ -176,7 +176,7 @@ const ProjectSkeleton = ({
       {/* === Info Section === */}
       <div id="info-section" className="mx-4 sm:mx-24 2xl:mx-24 mt-12 2xl:mt-36 min-h-screen">
         {/* Description */}
-        <div className="w-full sm:w-9/10 2xl:w-2/5 pb-8">
+        <div className="w-full sm:w-9/10 2xl:w-4/5 pb-8">
           <p className="text-base sm:text-lg font-normal leading-relaxed pb-4">
             {Description}
           </p>
