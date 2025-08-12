@@ -5,6 +5,7 @@ import OldGeorgetown3 from "@/public/images/7607-old-georgetown/old-georgetown-3
 import OldGeorgetown4 from "@/public/images/7607-old-georgetown/old-georgetown-4.png";
 import OldGeorgetown5 from "@/public/images/7607-old-georgetown/old-georgetown-5.png";
 import OldGeorgetown6 from "@/public/images/7607-old-georgetown/old-georgetown-6.png";
+import OldGeorgetown7 from "@/public/images/7607-old-georgetown/old-georgetown-7.png";
 
 const OldGeorgetown = () => {
   return (
@@ -22,6 +23,7 @@ const OldGeorgetown = () => {
           OldGeorgetown4,
           OldGeorgetown5,
           OldGeorgetown6,
+          OldGeorgetown7,
         ]}
       />
     </div>

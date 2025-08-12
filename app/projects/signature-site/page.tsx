@@ -1,9 +1,9 @@
 import ProjectSkeleton from "@/app/components/ProjectSkeleton";
 import SignatureSite1 from "@/public/images/signature-site/signature-site-1.png";
-import SignatureSite2 from "@/public/images/signature-site/signature-site-1.png";
-import SignatureSite3 from "@/public/images/signature-site/signature-site-1.png";
-import SignatureSite4 from "@/public/images/signature-site/signature-site-1.png";
-import SignatureSite5 from "@/public/images/signature-site/signature-site-1.png";
+import SignatureSite2 from "@/public/images/signature-site/signature-site-2.png";
+import SignatureSite3 from "@/public/images/signature-site/signature-site-3.png";
+import SignatureSite4 from "@/public/images/signature-site/signature-site-4.png";
+import SignatureSite5 from "@/public/images/signature-site/signature-site-5.png";
 
 const SignatureSite = () => {
   return (

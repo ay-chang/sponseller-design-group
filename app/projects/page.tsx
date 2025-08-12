@@ -23,18 +23,10 @@ interface CardProps {
   src: StaticImageData;
   alt: string;
   title: string;
-  subtitle: string;
   imageClassName?: string;
 }
 
-const Card: React.FC<CardProps> = ({
-  href = "/",
-  src,
-  alt,
-  title,
-  subtitle,
-  imageClassName = "",
-}) => {
+const Card: React.FC<CardProps> = ({ href = "/", src, alt, title, imageClassName = "" }) => {
   const cardContent = (
     <div className="cursor-pointer">
       <div className="max-h-110 2xl:max-h-400 overflow-hidden">
@@ -46,7 +38,6 @@ const Card: React.FC<CardProps> = ({
         />
       </div>
       <p className="text-sm pt-2">{title}</p>
-      <p className="text-sm text-gray-500">{subtitle}</p>
     </div>
   );
 
@@ -67,49 +58,42 @@ const Projects = () => {
           src={CarollCreek}
           alt="Caroll Creek Historic District"
           title="Caroll Creek Historic District"
-          subtitle="Residences / Retail"
         />
         <Card
           href="/projects/national-hq"
           src={NationalHQ}
           alt="National Headquarters"
           title="National Headquarters"
-          subtitle="Residences / Retail"
         />
         <Card
           href="/projects/880-p-street-nw"
           src={PStreet}
           alt="P Street Development"
           title="880 P Street NW"
-          subtitle="Mixed-Use Development"
         />
         <Card
           href="/projects/historic-greenbelt-master-plan"
           src={Greenbelt}
           alt="Greenbelt"
           title="Historic Greenbelt Master Plan"
-          subtitle="Office, Hotel, Residential, Townhomes"
         />
         <Card
           href="/projects/1820-fort-meyer"
           src={FortMeyer}
           alt="Fort Meyer"
           title="1820 Fort Meyer"
-          subtitle="Mixed-Use Development"
         />
         <Card
           href="/projects/7272-wisconsin-avenue"
           src={Wisconsin}
           alt="7272 Wisconsin"
           title="7272 Wisconsin Avenue"
-          subtitle="Mixed-Use Development"
         />
         <Card
           href="/projects/7607-old-georgetown-road"
           src={OldGeorgetown}
           alt="Old Georgetown"
           title="7607 Old Georgetown Road"
-          subtitle="Historic Redevelopment"
           imageClassName="object-[center_0%]"
         />
         <Card
@@ -117,49 +101,42 @@ const Projects = () => {
           src={MarylandMaster}
           alt="MarylandMaster"
           title="Maryland Master Plan"
-          subtitle="Office / Residences / Retail"
         />
         <Card
           href="/projects/4747-bethesda-avenue"
           src={Bethesda}
           alt="Bethesda Development"
           title="4747 Bethesda Avenue"
-          subtitle="Corporate Headquarters / Retail"
         />
         <Card
           href="/projects/walter-reed-master-plan"
           src={WalterReed}
           alt="Walter Reed Development"
           title="Walter Reed Master Plan"
-          subtitle="Mixed-Use Development"
         />
         <Card
           href="/projects/international-corporate-headquarters"
           src={InternationalHQ}
           alt="International Corporate Headquarters"
           title="International Corporate Headquarters"
-          subtitle="Corporate Office"
         />
         <Card
           href="/projects/auburn-avenue"
           src={AuburnAvenue}
           alt="Auburn Avenue Residences"
           title="Auburn Avenue"
-          subtitle="Residences"
         />
         <Card
           href="/projects/silver-spring-vision"
           src={SilverSpring}
           alt="Silver Spring"
           title="Silver Spring Vision"
-          subtitle="Mixed-Use Development"
         />
         <Card
           href="/projects/city-ridge"
           src={CityRidge}
           alt="City Ridge"
           title="City Ridge"
-          subtitle="Office / Residences / Retail"
         />
 
         <Card
@@ -167,7 +144,6 @@ const Projects = () => {
           src={SignatureSite}
           alt="Signature Site"
           title="Signature Site Reston"
-          subtitle="Mixed-Use Development"
         />
 
         <Card
@@ -175,7 +151,6 @@ const Projects = () => {
           src={UnionMarket}
           alt="Union Market"
           title="Union Market"
-          subtitle="Residential"
         />
       </div>
     </div>

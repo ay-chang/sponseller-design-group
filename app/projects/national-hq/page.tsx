@@ -7,11 +7,6 @@ import NationalHeadquarters5 from "@/public/images/national-headquarter/national
 import NationalHeadquarters6 from "@/public/images/national-headquarter/national-hq-6.png";
 import NationalHeadquarters7 from "@/public/images/national-headquarter/national-hq-7.png";
 import NationalHeadquarters8 from "@/public/images/national-headquarter/national-hq-8.png";
-import NationalHeadquarters9 from "@/public/images/national-headquarter/national-hq-9.png";
-import NationalHeadquarters10 from "@/public/images/national-headquarter/national-hq-10.png";
-import NationalHeadquarters11 from "@/public/images/national-headquarter/national-hq-11.png";
-import NationalHeadquarters12 from "@/public/images/national-headquarter/national-hq-12.png";
-import NationalHeadquarters13 from "@/public/images/national-headquarter/national-hq-13.png";
 
 const NationalHeadquarters = () => {
   return (
@@ -31,11 +26,6 @@ const NationalHeadquarters = () => {
           NationalHeadquarters6,
           NationalHeadquarters7,
           NationalHeadquarters8,
-          NationalHeadquarters9,
-          NationalHeadquarters10,
-          NationalHeadquarters11,
-          NationalHeadquarters12,
-          NationalHeadquarters13,
         ]}
       />
     </div>

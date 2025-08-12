@@ -5,6 +5,7 @@ import CarollCreek3 from "@/public/images/caroll-creek/caroll-creek-3.png";
 import CarollCreek4 from "@/public/images/caroll-creek/caroll-creek-4.png";
 import CarollCreek5 from "@/public/images/caroll-creek/caroll-creek-5.png";
 import CarollCreek6 from "@/public/images/caroll-creek/caroll-creek-6.png";
+import CarollCreek7 from "@/public/images/caroll-creek/caroll-creek-7.png";
 
 const CarollCreek = () => {
   return (
@@ -29,6 +30,7 @@ const CarollCreek = () => {
           CarollCreek4,
           CarollCreek5,
           CarollCreek6,
+          CarollCreek7,
         ]}
       />
     </div>
