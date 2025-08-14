@@ -1,6 +1,6 @@
 "use client";
 
-import PStreet from "@/public/images/caroll-creek/caroll-creek-3.png";
+import PStreet from "@/public/images/caroll-creek/caroll-creek-3.jpg";
 import Bethesda from "@/public/images/int-corp-hq/international-hq-3.png";
 import MackenzieGallery from "@/public/images/MackenzieGallery.webp";
 import type { StaticImageData } from "next/image";

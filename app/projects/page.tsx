@@ -1,15 +1,15 @@
 import AuburnAvenue from "@/public/images/auburn-avenue/auburn-avenue-1.png";
-import CarollCreek from "@/public/images/caroll-creek/caroll-creek-1.png";
+import CarollCreek from "@/public/images/caroll-creek/caroll-creek-1.jpg";
 import NationalHQ from "@/public/images/national-headquarter/national-hq-1.png";
-import CityRidge from "@/public/images/city-ridge/city-ridge-1.png";
-import PStreet from "@/public/images/880-p-street/p-street-880-1.png";
-import Wisconsin from "@/public/images/7272-wisconsin-avenue/wisconsin-1.png";
+import CityRidge from "@/public/images/city-ridge/city-ridge-1.jpg";
+import PStreet from "@/public/images/880-p-street/p-street-880-1.jpg";
+import Wisconsin from "@/public/images/7272-wisconsin-avenue/wisconsin-1.jpg";
 import InternationalHQ from "@/public/images/int-corp-hq/international-hq-1.png";
 import WalterReed from "@/public/images/walter-reed/walter-reed-1.png";
 import UnionMarket from "@/public/images/union-market/union-market-1.png";
 import OldGeorgetown from "@/public/images/7607-old-georgetown/old-georgetown-1.png";
 import FortMeyer from "@/public/images/1820-fort-meyer/fort-meyer-1.png";
-import Bethesda from "@/public/images/4747-bethesda-avenue/bethesda-1.png";
+import Bethesda from "@/public/images/4747-bethesda-avenue/bethesda-1.jpg";
 import Greenbelt from "@/public/images/green-belt/green-belt-1.png";
 import SilverSpring from "@/public/images/silver-spring/silver-spring-1.png";
 import MarylandMaster from "@/public/images/maryland-master/maryland-master-1.png";
@@ -37,7 +37,7 @@ const Card: React.FC<CardProps> = ({ href = "/", src, alt, title, imageClassName
           loading="lazy"
         />
       </div>
-      <p className="text-sm pt-2">{title}</p>
+      <p className="pt-2">{title}</p>
     </div>
   );
 

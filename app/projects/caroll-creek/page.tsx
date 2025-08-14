@@ -1,11 +1,11 @@
 import ProjectSkeleton from "@/app/components/ProjectSkeleton";
-import CarollCreek1 from "@/public/images/caroll-creek/caroll-creek-1.png";
-import CarollCreek2 from "@/public/images/caroll-creek/caroll-creek-2.png";
-import CarollCreek3 from "@/public/images/caroll-creek/caroll-creek-3.png";
-import CarollCreek4 from "@/public/images/caroll-creek/caroll-creek-4.png";
-import CarollCreek5 from "@/public/images/caroll-creek/caroll-creek-5.png";
-import CarollCreek6 from "@/public/images/caroll-creek/caroll-creek-6.png";
-import CarollCreek7 from "@/public/images/caroll-creek/caroll-creek-7.png";
+import CarollCreek1 from "@/public/images/caroll-creek/caroll-creek-1.jpg";
+import CarollCreek2 from "@/public/images/caroll-creek/caroll-creek-2.jpg";
+import CarollCreek3 from "@/public/images/caroll-creek/caroll-creek-3.jpg";
+import CarollCreek4 from "@/public/images/caroll-creek/caroll-creek-4.jpg";
+import CarollCreek5 from "@/public/images/caroll-creek/caroll-creek-5.jpg";
+import CarollCreek6 from "@/public/images/caroll-creek/caroll-creek-6.jpg";
+import CarollCreek7 from "@/public/images/caroll-creek/caroll-creek-7.jpg";
 
 const CarollCreek = () => {
   return (

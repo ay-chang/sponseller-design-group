@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import CoverImage from "../public/images/caroll-creek/caroll-creek-1.png";
+import CoverImage from "../public/images/caroll-creek/caroll-creek-1.jpg";
 import CoverImage2 from "../public/images/national-headquarter/national-hq-1.png";
-import CoverImage3 from "../public/images/7272-wisconsin-avenue/wisconsin-1.png";
+import CoverImage3 from "../public/images/7272-wisconsin-avenue/wisconsin-1.jpg";
 import News from "@/app/components/News";
 
 export default function Home() {

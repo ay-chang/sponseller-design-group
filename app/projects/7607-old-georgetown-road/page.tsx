@@ -13,7 +13,8 @@ const OldGeorgetown = () => {
       <ProjectSkeleton
         Title="7607 Old Georgetown Road"
         Location="Bethesda, Maryland"
-        Completion=""
+        Completion="2024"
+        Completed={true}
         Program="Residential, Retail"
         Description="A highly constrained urban site in the heart of this neighborhood required careful planning and massing. The volumes address both the primary arterial and the adjacent curving tree-lined frontage to the east. The architects utilized modest masonry materials and worked with window articulation, pattern, and color to provide design value using conventional construction practices."
         Images={[

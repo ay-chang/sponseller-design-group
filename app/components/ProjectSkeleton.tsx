@@ -7,6 +7,7 @@ const ProjectSkeleton = ({
   Title,
   Location,
   Completion,
+  Completed = false,
   Program,
   Description,
   Images,
@@ -14,6 +15,7 @@ const ProjectSkeleton = ({
   Title: string;
   Location: string;
   Completion: string;
+  Completed?: boolean;
   Program: string;
   Description: string;
   Images: StaticImageData[];
@@ -196,7 +198,9 @@ const ProjectSkeleton = ({
             )}
             {Completion && (
               <div className="flex py-2">
-                <p className="text-sm text-gray-500 w-1/2">Anticipated Completion</p>
+                <p className="text-sm text-gray-500 w-1/2">
+                  {Completed ? "" : "Anticipated"} Completion
+                </p>
                 <p className="text-sm font-medium w-1/2">{Completion}</p>
               </div>
             )}
