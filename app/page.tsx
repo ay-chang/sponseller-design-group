@@ -5,10 +5,11 @@ import Image from "next/image";
 import CoverImage from "../public/images/caroll-creek/caroll-creek-1.jpg";
 import CoverImage2 from "../public/images/national-headquarter/national-hq-1.png";
 import CoverImage3 from "../public/images/7272-wisconsin-avenue/wisconsin-1.jpg";
+import CoverImage4 from "../public/images/7607-old-georgetown/old-georgetown-1.png";
 import News from "@/app/components/News";
 
 export default function Home() {
-  const coverImages = [CoverImage, CoverImage2, CoverImage3];
+  const coverImages = [CoverImage, CoverImage2, CoverImage3, CoverImage4];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -16,7 +17,7 @@ export default function Home() {
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % coverImages.length);
       }, 800);
-    }, 10000);
+    }, 7500);
 
     return () => clearInterval(interval);
   }, [coverImages.length]);
