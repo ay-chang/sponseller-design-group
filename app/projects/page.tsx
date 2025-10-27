@@ -14,147 +14,164 @@ import Greenbelt from "@/public/images/green-belt/green-belt-1.png";
 import SilverSpring from "@/public/images/silver-spring/silver-spring-1.png";
 import MarylandMaster from "@/public/images/maryland-master/maryland-master-1.png";
 import SignatureSite from "@/public/images/signature-site/signature-site-1.png";
+import IwoJimaCondominiums from "@/public/images/iwo-jima/iwo-jima-1.jpg";
+import RoederCommunity from "@/public/images/roeder-community-center/roeder-community-1.png";
 import Image from "next/image";
 import Link from "next/link";
 import type { StaticImageData } from "next/image";
 
 interface CardProps {
-  href?: string;
-  src: StaticImageData;
-  alt: string;
-  title: string;
-  imageClassName?: string;
+    href?: string;
+    src: StaticImageData;
+    alt: string;
+    title: string;
+    imageClassName?: string;
 }
 
 const Card: React.FC<CardProps> = ({ href = "/", src, alt, title, imageClassName = "" }) => {
-  const cardContent = (
-    <div className="cursor-pointer">
-      <div className="max-h-110 2xl:max-h-400 overflow-hidden">
-        <Image
-          src={src}
-          alt={alt}
-          className={`w-full max-h-110 2xl:max-h-400 min-h-44 object-cover hover:scale-98 duration-500 ${imageClassName}`}
-          loading="lazy"
-        />
-      </div>
-      <p className="pt-2">{title}</p>
-    </div>
-  );
+    const cardContent = (
+        <div className="cursor-pointer">
+            <div className="max-h-110 2xl:max-h-400 overflow-hidden">
+                <Image
+                    src={src}
+                    alt={alt}
+                    className={`w-full max-h-110 2xl:max-h-400 min-h-44 object-cover hover:scale-98 duration-500 ${imageClassName}`}
+                    loading="lazy"
+                />
+            </div>
+            <p className="pt-2">{title}</p>
+        </div>
+    );
 
-  return (
-    <Link href={href}>
-      <div className="cursor-pointer">{cardContent}</div>
-    </Link>
-  );
+    return (
+        <Link href={href}>
+            <div className="cursor-pointer">{cardContent}</div>
+        </Link>
+    );
 };
 
 const Projects = () => {
-  return (
-    <div>
-      {/* Grid View */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 2xl:grid-cols-3 gap-y-24 gap-x-20 mx-4 sm:mx-24 2xl:mx-24 my-24 items-center">
-        <Card
-          href="/projects/caroll-creek"
-          src={CarollCreek}
-          alt="Caroll Creek Historic District"
-          title="Caroll Creek Historic District"
-        />
-        <Card
-          href="/projects/national-hq"
-          src={NationalHQ}
-          alt="National Headquarters"
-          title="National Headquarters"
-        />
-        <Card
-          href="/projects/880-p-street-nw"
-          src={PStreet}
-          alt="P Street Development"
-          title="880 P Street NW"
-        />
-        <Card
-          href="/projects/historic-greenbelt-master-plan"
-          src={Greenbelt}
-          alt="Greenbelt"
-          title="Historic Greenbelt Master Plan"
-        />
-        <Card
-          href="/projects/1820-fort-meyer"
-          src={FortMeyer}
-          alt="Fort Meyer"
-          title="1820 Fort Meyer"
-        />
-        <Card
-          href="/projects/7272-wisconsin-avenue"
-          src={Wisconsin}
-          alt="7272 Wisconsin"
-          title="7272 Wisconsin Avenue"
-        />
-        <Card
-          href="/projects/7607-old-georgetown-road"
-          src={OldGeorgetown}
-          alt="Old Georgetown"
-          title="7607 Old Georgetown Road"
-          imageClassName="object-[center_0%]"
-        />
-        <Card
-          href="/projects/maryland-master"
-          src={MarylandMaster}
-          alt="MarylandMaster"
-          title="Maryland Master Plan"
-        />
-        <Card
-          href="/projects/4747-bethesda-avenue"
-          src={Bethesda}
-          alt="Bethesda Development"
-          title="4747 Bethesda Avenue"
-        />
-        <Card
-          href="/projects/walter-reed-master-plan"
-          src={WalterReed}
-          alt="Walter Reed Development"
-          title="Walter Reed Master Plan"
-        />
-        <Card
-          href="/projects/international-corporate-headquarters"
-          src={InternationalHQ}
-          alt="International Corporate Headquarters"
-          title="International Corporate Headquarters"
-        />
-        <Card
-          href="/projects/auburn-avenue"
-          src={AuburnAvenue}
-          alt="Auburn Avenue Residences"
-          title="Auburn Avenue"
-        />
-        <Card
-          href="/projects/silver-spring-vision"
-          src={SilverSpring}
-          alt="Silver Spring"
-          title="Silver Spring Vision"
-        />
-        <Card
-          href="/projects/city-ridge"
-          src={CityRidge}
-          alt="City Ridge"
-          title="City Ridge"
-        />
+    return (
+        <div>
+            {/* Grid View */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 2xl:grid-cols-3 gap-y-24 gap-x-20 mx-4 sm:mx-24 2xl:mx-24 my-24 items-center">
+                <Card
+                    href="/projects/caroll-creek"
+                    src={CarollCreek}
+                    alt="Caroll Creek Historic District"
+                    title="Caroll Creek Historic District"
+                />
+                <Card
+                    href="/projects/national-hq"
+                    src={NationalHQ}
+                    alt="National Headquarters"
+                    title="National Headquarters"
+                />
+                <Card
+                    href="/projects/880-p-street-nw"
+                    src={PStreet}
+                    alt="P Street Development"
+                    title="880 P Street NW"
+                />
+                <Card
+                    href="/projects/historic-greenbelt-master-plan"
+                    src={Greenbelt}
+                    alt="Greenbelt"
+                    title="Historic Greenbelt Master Plan"
+                />
+                <Card
+                    href="/projects/1820-fort-meyer"
+                    src={FortMeyer}
+                    alt="Fort Meyer"
+                    title="1820 Fort Meyer"
+                />
+                <Card
+                    href="/projects/iwo-jima-condominiums"
+                    src={IwoJimaCondominiums}
+                    alt="Iwo Jima Condominiums"
+                    title="Iwo Jima Condominiums"
+                />
+                <Card
+                    href="/projects/7272-wisconsin-avenue"
+                    src={Wisconsin}
+                    alt="7272 Wisconsin"
+                    title="7272 Wisconsin Avenue"
+                />
 
-        <Card
-          href="/projects/signature-site"
-          src={SignatureSite}
-          alt="Signature Site"
-          title="Signature Site Reston"
-        />
+                <Card
+                    href="/projects/maryland-master"
+                    src={MarylandMaster}
+                    alt="MarylandMaster"
+                    title="Maryland Master Plan"
+                />
+                <Card
+                    href="/projects/7607-old-georgetown-road"
+                    src={OldGeorgetown}
+                    alt="Old Georgetown"
+                    title="7607 Old Georgetown Road"
+                    imageClassName="object-[center_0%]"
+                />
 
-        <Card
-          href="/projects/union-market"
-          src={UnionMarket}
-          alt="Union Market"
-          title="Union Market"
-        />
-      </div>
-    </div>
-  );
+                <Card
+                    href="/projects/4747-bethesda-avenue"
+                    src={Bethesda}
+                    alt="Bethesda Development"
+                    title="4747 Bethesda Avenue"
+                />
+                <Card
+                    href="/projects/walter-reed-master-plan"
+                    src={WalterReed}
+                    alt="Walter Reed Development"
+                    title="Walter Reed Master Plan"
+                />
+                <Card
+                    href="/projects/international-corporate-headquarters"
+                    src={InternationalHQ}
+                    alt="International Corporate Headquarters"
+                    title="International Corporate Headquarters"
+                />
+                <Card
+                    href="/projects/auburn-avenue"
+                    src={AuburnAvenue}
+                    alt="Auburn Avenue Residences"
+                    title="Auburn Avenue"
+                />
+                <Card
+                    href="/projects/silver-spring-vision"
+                    src={SilverSpring}
+                    alt="Silver Spring"
+                    title="Silver Spring Vision"
+                />
+                <Card
+                    href="/projects/city-ridge"
+                    src={CityRidge}
+                    alt="City Ridge"
+                    title="City Ridge"
+                />
+
+                <Card
+                    href="/projects/signature-site"
+                    src={SignatureSite}
+                    alt="Signature Site"
+                    title="Signature Site Reston"
+                />
+
+                <Card
+                    href="/projects/union-market"
+                    src={UnionMarket}
+                    alt="Union Market"
+                    title="Union Market"
+                />
+
+                <Card
+                    href="/projects/roeder-community-center"
+                    src={RoederCommunity}
+                    alt="Roeder Community Center"
+                    title="Roeder Community Center"
+                />
+            </div>
+        </div>
+    );
 };
 
 export default Projects;
