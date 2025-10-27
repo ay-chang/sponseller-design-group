@@ -65,9 +65,9 @@ const News = () => {
                 {/* News Items */}
                 <Card
                     src={MarsHQ}
-                    alt="MarsHQ Construction"
-                    title="Mars Headquarters Construction"
-                    story="The Mars Headquarters project has completed construction of its new structural framework. Construction completion is expected in spring 2027."
+                    alt="International Corporate Headquarters Construction"
+                    title="International Corporate Headquarters Construction"
+                    story="The International Corporate Headquarters project has completed construction of its new structural framework. Construction completion is expected in spring 2027."
                 />
                 <Card
                     src={CarollCreek}

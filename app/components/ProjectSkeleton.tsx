@@ -222,7 +222,7 @@ const ProjectSkeleton = ({
                         {Designed && (
                             <div className="py-2 flex w-8/10">
                                 <p className="text-sm text-gray-500">
-                                    Designed by robert m sponseller FAIA while at SBA
+                                    Designed by Robert M Sponseller FAIA while at SBA
                                     architects
                                 </p>
                             </div>
