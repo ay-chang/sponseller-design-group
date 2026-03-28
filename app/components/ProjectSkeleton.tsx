@@ -14,11 +14,11 @@ const ProjectSkeleton = ({
     Images,
 }: {
     Title: string;
-    Location: string;
-    Completion: string;
+    Location?: string;
+    Completion?: string;
     Completed?: boolean;
     Designed?: boolean;
-    Program: string;
+    Program?: string;
     Description: string;
     Images: StaticImageData[];
 }) => {

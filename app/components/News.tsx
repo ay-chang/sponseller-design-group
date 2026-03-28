@@ -5,6 +5,9 @@ import Bethesda from "@/public/images/int-corp-hq/international-hq-3.png";
 import MackenzieGallery from "@/public/images/MackenzieGallery.webp";
 import MarsHQ from "@/public/images/mars-hq-construction.jpg";
 import CarollCreek from "@/public/images/caroll-creek/caroll-creek-4.jpg";
+import Brickworks1 from "@/public/images/brickworks/brickworks-4.jpg";
+import Brickworks2 from "@/public/images/brickworks/brickworks-1.png";
+import Belington from "@/public/images/Belington.png";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import { useState } from "react";
@@ -63,6 +66,24 @@ const News = () => {
                 <h1 className="text-3xl sm:text-4xl font-medium mb-12">News</h1>
 
                 {/* News Items */}
+                <Card
+                    src={Brickworks1}
+                    alt="Brick Institute of America Design Award"
+                    title="Brick Institute of America Design Award"
+                    story="Building F located in the City Ridge neighborhood of Washington DC has been awarded a national design award from the Brick Institute of America. The Gold award cites the unique and careful craftsmanship in the design and detailing for the triangular shaped building. The residential apartment building design features a cantilevered brick screen which combines masonry and concrete to achieve its geometric form."
+                />
+                <Card
+                    src={Brickworks2}
+                    alt="BRICKWORKS Master Plan"
+                    title="BRICKWORKS Master Plan and Buildings Receive Planning Commission Approval"
+                    story="The proposed master plan for a former industrial brickyard area in Historic Frederick Maryland has received approval from the Frederick City Planning Commission. The site is part of a larger master plan community and contains 90 residential townhomes adjacent to a mixed-use center."
+                />
+                <Card
+                    src={Belington}
+                    alt="Belington Affordable Housing Master Plan"
+                    title="Belington Affordable Housing Master Plan"
+                    story="Sponseller Design Group have been awarded the master plan and execution of a 40-unit master plan for affordable housing on a 17-acre site in Belington, West Virginia. The client group is a national partnership focused on providing affordable single-family homes nationally as part of their effort to increase access to housing for all incomes. The architects will work with pre-fabrication manufacturers in the design forward execution of the housing from housing for singles and the elderly, and families."
+                />
                 <Card
                     src={MarsHQ}
                     alt="International Corporate Headquarters Construction"

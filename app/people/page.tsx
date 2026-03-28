@@ -1,45 +1,49 @@
-import PeoplePic from "@/public/images/people.webp";
+import PeoplePic from "@/public/images/people.png";
 import Image from "next/image";
 
 const People = () => {
-  return (
-    <div className="mx-4 sm:mx-24 2xl:mx-24 pb-24 2xl:pb-48">
-      {/* Banner */}
-      <div className="my-12 sm:my-16 text-3xl sm:text-5xl 2xl:text-6xl w-full sm:w-3/4 text-left sm:text-left">
-        <p>Dedicated professionals committed to creating meaningful architecture.</p>
-      </div>
+    return (
+        <div className="mx-4 sm:mx-24 2xl:mx-24 pb-24 2xl:pb-48">
+            {/* Banner */}
+            <div className="my-12 sm:my-16 text-3xl sm:text-5xl 2xl:text-6xl w-full sm:w-3/4 text-left sm:text-left">
+                <p>Dedicated professionals committed to creating meaningful architecture.</p>
+            </div>
 
-      {/* Main Section */}
-      <div className="flex flex-col sm:flex-row gap-12 sm:gap-16 mb-16 items-center">
-        {/* Image */}
-        <div className="w-full sm:w-1/2">
-          <Image
-            src={PeoplePic}
-            alt="People picture"
-            className="w-full h-auto object-cover"
-            priority
-          />
-        </div>
+            {/* Main Section */}
+            <div className="flex flex-col sm:flex-row gap-12 sm:gap-16 mb-16 items-center">
+                {/* Image */}
+                <div className="w-full sm:w-1/2">
+                    <Image
+                        src={PeoplePic}
+                        alt="People picture"
+                        className="w-full h-auto object-cover"
+                        priority
+                    />
+                </div>
 
-        {/* Text Content */}
-        <div className="w-full sm:w-1/2">
-          <p className="pb-6 sm:pb-12 text-xl sm:text-2xl font-semibold">Our People</p>
-          <p className="text-sm sm:text-md leading-relaxed pb-6 sm:pb-8">
-            Sponseller Design Group was founded in the spring of 2024 by principals Robert M.
-            Sponseller FAIA, Jennifer Chen AIA, and Huan Chou Chang AIA. Three colleagues that
-            have been working together for over 15 years in a previous office in Washington DC.
-          </p>
-          <p className="text-sm sm:text-md leading-relaxed">
-            Robert Sponseller FAIA worked as lead design principal on some of the most
-            significant sites in Washington DC and surrounding areas. Huan Chou Chang is an
-            experienced project manager with expertise in all phases of design and
-            construction. Jennifer Chen is a design team leader guiding the development and
-            realization of numerous complex multiple building projects in the region.
-          </p>
+                {/* Text Content */}
+                <div className="w-full sm:w-1/2">
+                    <p className="pb-6 sm:pb-12 text-xl sm:text-2xl font-semibold">
+                        Our People
+                    </p>
+                    <p className="text-sm sm:text-md leading-relaxed pb-6 sm:pb-8">
+                        Sponseller Design Group was founded in the spring of 2024 by principals
+                        Robert M. Sponseller FAIA, Jennifer Chen AIA, and Huan Chou Chang AIA.
+                        Three colleagues that have been working together for over 15 years in a
+                        previous office in Washington DC.
+                    </p>
+                    <p className="text-sm sm:text-md leading-relaxed">
+                        Robert Sponseller FAIA worked as lead design principal on some of the
+                        most significant sites in Washington DC and surrounding areas. Huan
+                        Chou Chang is an experienced project manager with expertise in all
+                        phases of design and construction. Jennifer Chen is a design team
+                        leader guiding the development and realization of numerous complex
+                        multiple building projects in the region.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default People;

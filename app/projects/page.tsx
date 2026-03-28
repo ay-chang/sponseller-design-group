@@ -16,6 +16,7 @@ import MarylandMaster from "@/public/images/maryland-master/maryland-master-1.pn
 import SignatureSite from "@/public/images/signature-site/signature-site-1.png";
 import IwoJimaCondominiums from "@/public/images/iwo-jima/iwo-jima-1.jpg";
 import RoederCommunity from "@/public/images/roeder-community-center/roeder-community-1.png";
+import Brickworks from "@/public/images/brickworks/brickworks-1.png";
 import Image from "next/image";
 import Link from "next/link";
 import type { StaticImageData } from "next/image";
@@ -168,6 +169,13 @@ const Projects = () => {
                     src={RoederCommunity}
                     alt="Roeder Community Center"
                     title="Roeder Community Center"
+                />
+
+                <Card
+                    href="/projects/brickworks"
+                    src={Brickworks}
+                    alt="Brickworks"
+                    title="Brickworks"
                 />
             </div>
         </div>
