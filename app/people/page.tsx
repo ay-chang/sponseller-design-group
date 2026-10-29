@@ -36,7 +36,11 @@ const People = () => {
                         Robert Sponseller FAIA worked as lead design principal on some of the
                         most significant sites in Washington DC and surrounding areas. Jennifer
                         Chen is a design team leader guiding the development and realization of
-                        numerous complex multiple building projects in the region.
+                        numerous complex multiple building projects in the region. Claudia
+                        Bancalari is a senior designer with experience in base building and
+                        interior design on multiple project types including commercial,
+                        residential and mixed use projects. She is experienced in all phases
+                        of project development.
                     </p>
                 </div>
             </div>

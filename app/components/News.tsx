@@ -8,6 +8,9 @@ import CarollCreek from "@/public/images/caroll-creek/caroll-creek-4.jpg";
 import Brickworks1 from "@/public/images/brickworks/brickworks-4.jpg";
 import Brickworks2 from "@/public/images/brickworks/brickworks-1.png";
 import Belington from "@/public/images/Belington.png";
+import BethesdaConversion from "@/public/images/news/bethesda-towers-1.png";
+import RoederApproval from "@/public/images/news/roeder-02.png";
+import DCHQLounge from "@/public/images/news/dc-hq-expansion-lounge.png";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import { useState } from "react";
@@ -18,9 +21,10 @@ interface CardProps {
     alt: string;
     title: string;
     story: string;
+    credit?: string;
 }
 
-const Card: React.FC<CardProps> = ({ src, alt, title, story }) => {
+const Card: React.FC<CardProps> = ({ src, alt, title, story, credit }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
@@ -36,6 +40,7 @@ const Card: React.FC<CardProps> = ({ src, alt, title, story }) => {
                     }`}
                 >
                     {story}
+                    {isExpanded && credit && ` ${credit}`}
                 </p>
                 <button
                     onClick={() => setIsExpanded(!isExpanded)}
@@ -67,9 +72,28 @@ const News = () => {
 
                 {/* News Items */}
                 <Card
+                    src={BethesdaConversion}
+                    alt="Office to residential conversion in Bethesda, Maryland"
+                    title="Office to Residential Conversion — Bethesda, MD"
+                    story="Sponseller Design Group has been retained to design the conversion of three office buildings located in the heart of Bethesda Maryland to residential use. The buildings date from the 1960’s and will provide residential apartments in the former office space. The project anticipates potential additional floors and selective demolition of the existing buildings and a comprehensive re-design of the ground level public realm. The project has begun design and is targeting a planning submission for the first quarter of 2027, with approvals expected fall/winter 2027."
+                />
+                <Card
+                    src={DCHQLounge}
+                    alt="DC HQ expansion rendering of a lounge with wood ceilings and informal seating"
+                    title="DC National Headquarters Expansion"
+                    story="Sponseller Design Group has been retained to design the expansion of a corporate headquarters for a national brand food company. The project is located in the City Ridge development in northwest DC and is approximately 25,000 sf. The expansion involves two levels of class A office space and exterior terrace area. The project is currently in construction with delivery expected in the fall of 2026."
+                />
+                <Card
+                    src={RoederApproval}
+                    alt="801 Roeder Road adaptive reuse project in Silver Spring, Maryland"
+                    title="801 Roeder Road Receives Planning Board Approval"
+                    story="The Montgomery County Planning Board has approved the design of the adaptive reuse project that provides office space for a nonprofit office user in Silver Spring, Maryland. The project went through the Site Plan approvals process. The project converts a current parking garage to the headquarters for a local community group. Construction of the base-building work began in the spring of 2026, with the office space build-out to commence in January 2027."
+                />
+                <Card
                     src={Brickworks1}
                     alt="Brick Institute of America Design Award"
                     title="Brick Institute of America Design Award"
+                    credit="Designed by Robert M Sponseller, FAIA while at SBA Architects."
                     story="Building F located in the City Ridge neighborhood of Washington DC has been awarded a national design award from the Brick Institute of America. The Gold award cites the unique and careful craftsmanship in the design and detailing for the triangular shaped building. The residential apartment building design features a cantilevered brick screen which combines masonry and concrete to achieve its geometric form."
                 />
                 <Card
@@ -88,6 +112,7 @@ const News = () => {
                     src={MarsHQ}
                     alt="International Corporate Headquarters Construction"
                     title="International Corporate Headquarters Construction"
+                    credit="Designed by Robert M Sponseller, FAIA while at SBA Architects."
                     story="The International Corporate Headquarters project has completed construction of its new structural framework. Construction completion is expected in spring 2027."
                 />
                 <Card
@@ -113,6 +138,7 @@ const News = () => {
                     alt="Int Headquarters new"
                     title="Groundbreaking - International Headquarters in Virginia"
                     story="Construction has begun on the adaptive reuse and expansion of an existing building to become a private company's international headquarters in Virginia. The project is highly sustainable and includes geothermal wells and rooftop solar panels as part of its on-site energy generation. Project completion is expected in 2026."
+                    credit="Designed by Robert M Sponseller, FAIA while at SBA Architects."
                 />
             </div>
         </div>
