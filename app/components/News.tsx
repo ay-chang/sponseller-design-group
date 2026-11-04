@@ -93,7 +93,7 @@ const News = () => {
                     src={Brickworks1}
                     alt="Brick Institute of America Design Award"
                     title="Brick Institute of America Design Award"
-                    credit="Designed by Robert M Sponseller, FAIA while at SBA Architects."
+                    credit="Designed by Robert M Sponseller, FAIA while at Shalom Baranes Associates."
                     story="Building F located in the City Ridge neighborhood of Washington DC has been awarded a national design award from the Brick Institute of America. The Gold award cites the unique and careful craftsmanship in the design and detailing for the triangular shaped building. The residential apartment building design features a cantilevered brick screen which combines masonry and concrete to achieve its geometric form."
                 />
                 <Card
@@ -112,7 +112,7 @@ const News = () => {
                     src={MarsHQ}
                     alt="International Corporate Headquarters Construction"
                     title="International Corporate Headquarters Construction"
-                    credit="Designed by Robert M Sponseller, FAIA while at SBA Architects."
+                    credit="Designed by Robert M Sponseller, FAIA while at Shalom Baranes Associates."
                     story="The International Corporate Headquarters project has completed construction of its new structural framework. Construction completion is expected in spring 2027."
                 />
                 <Card
@@ -138,7 +138,7 @@ const News = () => {
                     alt="Int Headquarters new"
                     title="Groundbreaking - International Headquarters in Virginia"
                     story="Construction has begun on the adaptive reuse and expansion of an existing building to become a private company's international headquarters in Virginia. The project is highly sustainable and includes geothermal wells and rooftop solar panels as part of its on-site energy generation. Project completion is expected in 2026."
-                    credit="Designed by Robert M Sponseller, FAIA while at SBA Architects."
+                    credit="Designed by Robert M Sponseller, FAIA while at Shalom Baranes Associates."
                 />
             </div>
         </div>
