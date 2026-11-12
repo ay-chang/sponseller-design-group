@@ -17,7 +17,7 @@ export default function Home() {
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % coverImages.length);
       }, 800);
-    }, 7500);
+    }, 5500);
 
     return () => clearInterval(interval);
   }, [coverImages.length]);
